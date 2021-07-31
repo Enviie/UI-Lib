@@ -22,6 +22,8 @@ end
 local imgui = Instance.new("ScreenGui")	 
 if syn.protect_gui then
     pcall(syn.protect_gui, imgui)
+elseif gethui then
+	pcall(gethui, imgui)
 elseif get_hidden_gui then
     pcall(get_hidden_gui, imgui)
 end
