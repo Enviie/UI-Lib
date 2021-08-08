@@ -20,9 +20,9 @@ do
 	if imgui then imgui.Parent:Destroy() end
 end
 local imgui = Instance.new("ScreenGui")	 
-if syn and syn.protect_gui then
+if (syn and syn.protect_gui) then
     pcall(syn.protect_gui, imgui)
-elseif executescript and gethui then
+elseif (executescript and gethui) then
     pcall(gethui, imgui)
 elseif get_hidden_gui then
     pcall(get_hidden_gui, imgui)
