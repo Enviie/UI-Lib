@@ -24,8 +24,10 @@ if (syn and syn.protect_gui) then
     pcall(syn.protect_gui, imgui)
 elseif (executescript and gethui) then
     pcall(gethui, imgui)
-elseif get_hidden_gui then
+elseif (PROTOSMASHER_LOADED and get_hidden_gui) then
     pcall(get_hidden_gui, imgui)
+else
+    warn("Not Supported soo yes free exploiters")
 end
 local Prefabs = Instance.new("Frame")
 local Label = Instance.new("TextLabel")
