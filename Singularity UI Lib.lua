@@ -22,9 +22,9 @@ end
 local imgui = Instance.new("ScreenGui")	 
 if (syn and syn.protect_gui) then
     pcall(syn.protect_gui, imgui)
-elseif (executescript and gethui) then
+elseif (identifyexecutor():find("ScriptWare") and "Script-Ware" and gethui) then
     pcall(gethui, imgui)
-elseif (PROTOSMASHER_LOADED and get_hidden_gui) then
+elseif (pebc_execute and get_hidden_gui) then
     pcall(get_hidden_gui, imgui)
 else
     warn("Not Supported soo yes free exploiters")
